@@ -6,6 +6,7 @@ from fixed_point_iteration_method import FixedPointIterationMethod
 
 from math import *
 
+# Your variable must be named var.
 equation = "var ** 3 - 48"
 differentiated_equation = "3 * var ** 2"
 re_arranged_equation = "sqrt(48 / (var))"
