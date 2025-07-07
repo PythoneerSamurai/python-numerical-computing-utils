@@ -1,73 +1,123 @@
 # Python Numerical Computing Utils
 
-This repository houses various mathematical algorithms for computing the roots of matrices and non-linear equations, coded in Python using standard libraries.
+A comprehensive collection of Python implementations for fundamental numerical methods used in scientific computing, engineering, and applied mathematics. This repository serves as a learning resource and practical toolbox for solving problems involving linear systems, nonlinear equations, numerical differentiation, integration, and interpolation.
 
-## Table of Contents
+---
 
-- [Description](#description)
-- [Repository Structure](#repository-structure)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
+## Features
 
-## Description
+- **Linear Algorithms**: Methods for solving linear systems, including direct and iterative techniques.
+- **Non-Linear Algorithms**: Root-finding methods for nonlinear equations.
+- **Numerical Differentiation**: Techniques for approximating derivatives.
+- **Numerical Integration**: Methods for evaluating definite integrals numerically.
+- **Numerical Interpolation**: Algorithms for constructing new data points within the range of a discrete set.
 
-This repository contains Python implementations of several numerical algorithms for solving mathematical problems such as computing the roots of matrices and solving non-linear equations. The primary goal is to provide efficient and easy-to-use solutions using standard Python libraries.
+---
 
-## Repository Structure
-
-The repository is organized as follows:
+## Directory Structure
 
 ```
 python-numerical-computing-utils/
 │
 ├── linear-algorithms/
-│   ├── gauss_elimination_method.py
-│   ├── gauss_jordan_method.py
-│   ├── gauss_seidel_iterative_method.py
-│   ├── jacobi_iterative_method.py
-│   ├── lu_decomposition_method.py
-│   └── test.py 
+│   ├── gauss_elimination_method.py         # Classical Gauss Elimination for linear systems
+│   ├── gauss_jordan_method.py              # Gauss-Jordan elimination (row reduction)
+│   ├── gauss_seidel_iterative_method.py    # Gauss-Seidel iterative solver
+│   ├── jacobi_iterative_method.py          # Jacobi iterative solver
+│   ├── lu_decomposition_method.py          # LU decomposition for matrix factorization
+│   ├── test.py                            # Tests for linear algorithms
+│   └── .gitignore
 │
 ├── non-linear-algorithms/
-│   ├── bisection_method.py
-│   ├── fixed_point_iteration_method.py
-│   ├── newton_raphson_method.py
-│   ├── regula_falsi_method.py
-│   ├── regula_secant_method.py
-│   └── test.py
+│   ├── bisection_method.py                 # Bisection root-finding method
+│   ├── fixed_point_iteration_method.py     # Fixed-point iteration for roots
+│   ├── newton_raphson_method.py            # Newton-Raphson method for nonlinear equations
+│   ├── regula_falsi_method.py              # Regula Falsi (False Position) method
+│   ├── regula_secant_method.py             # Secant method for root finding
+│   ├── test.py                            # Tests for non-linear algorithms
+│   └── .gitignore
 │
-└── README.md
+├── numerical-differentiation/
+│   ├── backward_differentiation.py         # Backward finite difference for derivatives
+│   ├── forward_differentiation.py          # Forward finite difference for derivatives
+│   ├── test.py                            # Tests for numerical differentiation
+│   └── .gitignore
+│
+├── numerical-integration/
+│   ├── simpsons_one_by_three_rule.py       # Simpson's 1/3 rule for integration
+│   ├── simpsons_three_by_eight_rule.py     # Simpson's 3/8 rule for integration
+│   ├── trapzoidals_rule.py                 # Trapezoidal rule for integration
+│   ├── test.py                            # Tests for numerical integration
+│   └── .gitignore
+│
+├── numerical-interpolation/
+│   ├── gauss_forward_central_difference.py # Gauss forward central difference interpolation
+│   ├── lagrange_interpolation.py           # Lagrange polynomial interpolation
+│   ├── newtons_backward_difference.py      # Newton's backward difference interpolation
+│   ├── newtons_divided_difference.py       # Newton's divided difference interpolation
+│   ├── newtons_forward_difference.py       # Newton's forward difference interpolation
+│   ├── test.py                            # Tests for numerical interpolation
+│   └── .gitignore
+│
+└── README.md                               # Project documentation (this file)
 ```
 
-- **linear-algorithms/**: Contains the implementation of various numerical algorithms for solving matrices.
-  - `gauss_elimination_method.py`: Class for computing the roots of matrices using the Gauss Elimination method.
-  - `gauss_jordan_method.py`: Class for computing the roots of matrices using the Gauss-Jordan method.
-  - `gauss_seidel_iterative_method.py`: Class for computing the roots of matrices using the Gauss-Seidel Iterative method.
-  - `jacobi_iterative_method.py`: Class for computing the roots of matrices using the Jacobi Iterative method.
-  - `lu_decomposition_method.py`: Class for computing the roots of matrices using the LU Decomposition method.
-- **non-linear-algorithms/**: Contains the implementation of various numerical algorithms for computing the roots of non-linear equations.
-  - `bisection_method.py`: Class for computing the roots of non-linear equations using the Bisection method.
-  - `fixed_point_iteration_method.py`: Class for computing the roots of non-linear equations using the Fixed Point Iteration method.
-  - `newton_raphson_method.py`: Class for computing the roots of non-linear equations using the Newton-Raphson method.
-  - `regula_falsi_method.py`: Class for computing the roots of non-linear equations using the Gauss Regula-Falsi method.
-  - `regula_secant_method.py`: Class for computing the roots of non-linear equations using the Gauss Regula-Secant method.
+---
 
-## Installation
+## Module Overview
 
-Not publishing this repository as a package yet. Just download the scripts and use them. If this repository proves beneficial to a decent amount of people, then I'll 
-publish it as a package.
+### Linear Algorithms
+- **Direct Methods**: `gauss_elimination_method.py`, `gauss_jordan_method.py`, `lu_decomposition_method.py`
+- **Iterative Methods**: `jacobi_iterative_method.py`, `gauss_seidel_iterative_method.py`
+- **Testing**: `test.py` for unit tests and usage examples
 
-## Usage
+### Non-Linear Algorithms
+- Root-finding: Bisection, Fixed-point, Newton-Raphson, Regula Falsi, Secant methods
+- All implementations include test scripts for validation
 
-View the test.py files in both sub-folders for usage examples.
+### Numerical Differentiation
+- Forward and backward finite difference methods for approximating derivatives of functions
+- Accompanied by test scripts
 
-## Contributing
+### Numerical Integration
+- Trapezoidal rule, Simpson’s 1/3 and 3/8 rules for numerical integration of functions
+- Includes tests for demonstration
 
-Contributions are welcome! Please open an issue or submit a pull request if you have any improvements or bug fixes. Would also appreciate it if you guys could
-populate this repository with more algorithms.
+### Numerical Interpolation
+- Lagrange and Newton methods for interpolation of discrete data
+- Gauss forward central difference for interpolation
+- Example and test scripts included
+
+---
+
+## Getting Started
+
+1. **Clone the Repository**
+   ```bash
+   git clone https://github.com/PythoneerSamurai/python-numerical-computing-utils.git
+   cd python-numerical-computing-utils
+   ```
+
+2. **Run Tests or Examples**
+   - Each submodule contains a `test.py` file to demonstrate usage.
+
+3. **Dependencies**
+   - Only standard Python libraries used (unless noted in the script headers).
+
+---
+
+## Contribution
+
+Issues, improvements, and new numerical algorithms are welcome! Please open an issue or submit a pull request.
+
+---
 
 ## License
 
-No license. Would appreciate attribution though.
+[CC BY License](https://creativecommons.org/licenses/by/4.0/).
+
+---
+
+## Author
+
+[PythoneerSamurai](https://github.com/PythoneerSamurai)
